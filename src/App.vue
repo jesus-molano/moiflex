@@ -1,5 +1,12 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import {useMovies} from '@/use/useMovies.js'
+import { onMounted } from 'vue';
+
+const {getMovies} = useMovies();
+onMounted(() => {
+  getMovies()
+})
 </script>
 
 <template>
